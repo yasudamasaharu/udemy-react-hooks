@@ -11,7 +11,7 @@ const App = () => {
 
   const addEvent = (e) => {
     e.preventDefault();
-    console.log({ title, body });
+    console.log({ title, body, state });
     dispatch({
       type: 'CREATE_EVENT',
       title,
