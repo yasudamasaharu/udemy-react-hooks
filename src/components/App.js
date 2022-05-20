@@ -11,6 +11,7 @@ import reducer from '../reducers/index';
 const App = () => {
   const initialState = {
     events: [],
+    operationLogs: [],
   };
   const [state, dispatch] = useReducer(reducer, initialState);
 
