@@ -14,6 +14,7 @@ const Event = ({ event }) => {
     );
     if (result) {
       dispatch({ type: DELETE_EVENT, id });
+
       dispatch({
         type: ADD_OPERATION_LOG,
         description: `イベント(id= ${id})を削除しました。`,
@@ -23,20 +24,22 @@ const Event = ({ event }) => {
   };
 
   return (
-    <tr>
-      <td>{id}</td>
-      <td>{event.title}</td>
-      <td>{event.body}</td>
-      <td>
-        <button
-          type="button"
-          className="btn btn-danger"
-          onClick={handleClickDeleteBtn}
-        >
-          削除
-        </button>
-      </td>
-    </tr>
+    <>
+      <tr>
+        <td>{id}</td>
+        <td>{event.title}</td>
+        <td>{event.body}</td>
+        <td>
+          <button
+            type="button"
+            className="btn btn-danger"
+            onClick={handleClickDeleteBtn}
+          >
+            削除
+          </button>
+        </td>
+      </tr>
+    </>
   );
 };
 

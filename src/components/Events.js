@@ -6,7 +6,6 @@ import AppContext from '../contexts/AppContext';
 const Events = () => {
   const { state } = useContext(AppContext);
 
-  console.log(state);
   return (
     <>
       <h4>イベント一覧</h4>
