@@ -17,15 +17,13 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <>
-      <AppContext.Provider value={{ state, dispatch }}>
-        <div className="container-fluid">
-          <EventForm />
-          <Events />
-          <OperationLogs />
-        </div>
-      </AppContext.Provider>
-    </>
+    <AppContext.Provider value={{ state, dispatch }}>
+      <div className="container-fluid">
+        <EventForm />
+        <Events />
+        <OperationLogs />
+      </div>
+    </AppContext.Provider>
   );
 };
 
